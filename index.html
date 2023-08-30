@@ -148,7 +148,7 @@
                     <div class="row">
                         <div class="contact-left">
                             <h1 class="sub-title">Contact Me</h1>
-                            <p><i class="fa-solid fa-paper-plane"></i> Qashifsiddiqui12@gmail.com</p>
+                            <p><i class="fa-solid fa-paper-plane"></i> Qashifsiddiqui12@gmai.com</p>
                             <p><i class="fa-solid fa-square-phone"></i> +91 8299223894</p>
                             <div class="social-icons">
                                 <a href="https://www.facebook.com/profile.php?id=100012827168125"><i class="fa-brands fa-facebook"></i></a>
@@ -191,26 +191,25 @@
                 document.getElementById(tabname).classList.add("active-tab")
             }
         </script>
-
         <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbxDRlWZeos2Sj8VBW3pNZfS9pS36LG8QOT7Wt5BQNrQlOgmC5xhTk4Qb6WWsLJ8fTNx7w/exec'
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyrd_be8CkApj-9-yAuJIz8t3MWNmksKTD_kyUxjBtFwnJ6mGymy7Kdz7m2FoeS_EkOKw/exec'
             const form = document.forms['submit-to-google-sheet']
-            const msg=document.getElementById('msg')
-
+            const msg=document.getElementById("msg")
+          
             form.addEventListener('submit', e => {
-                e.preventDefault()
-                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                    .then(response => {
-                        msg.innerHTML='Message sent successfully'
-                        setTimeout(function()){
-                            msg.innerHTML=''
-                        }
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML= "Message sent successfully"
+                    setTimeout(function(){
+                        msg.innerHTML=""
                     },5000)
                     form.reset()
-
-                    .catch(error => console.error('Error!', error.message))
+                })
+                .catch(error => console.error('Error!', error.message))
             })
+          </script>
 
-        </script>
+
     </body>
 </html>
